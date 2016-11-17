@@ -1,8 +1,7 @@
-
 # Pavilion UI Components
 Angular UI Components, which are usefull for data representation and visualization. To setup project environment, follow the below steps :
   - Clone the git project :
-    ``` git clone https://github.com/shubhampardesi/Pavilion_UI_Component.git```
+    ``` git clone https://github.com/sp-pardeshi/Pavilion_UI_Component.git```
   - Go to project main dir. :
   ``` cd Pavilion-UI-Components```
    - Install project dependencies :
