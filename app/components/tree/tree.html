@@ -1,0 +1,37 @@
+<div ng-app="Pavilion_UI.tree" ng-controller="treeController">
+  <div ng-if = "userName">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="pageHeader">Grid Component's Tree View</p>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <div class="row row-custom">
+      <div class="col-lg-12">
+        <button id="expandAll" type="button" class="btn btn-success" ng-click="expandAll()">
+          <span class="glyphicon glyphicon-sort-by-attributes btnIcon" aria-hidden="true"></span>
+          Expand All
+        </button>
+        <button id="toggleFirstRow" type="button" class="btn btn-success" ng-click="toggleRow(0)">
+          <span class="glyphicon glyphicon-cog btnIcon" aria-hidden="true"></span>
+          Toggle First Row
+        </button>
+        <button id="toggleSecondRow" type="button" class="btn btn-success" ng-click="toggleRow(1)">
+          <span class="glyphicon glyphicon-cog btnIcon" aria-hidden="true"></span>
+          Toggle Second Row
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="grid1" ui-grid="gridOptions"
+             ui-grid-tree-view
+             ui-grid-exporter
+             ui-grid-selection
+             class="grid">
+           </div>
+      </div>
+    </div>
+  </div>
+</div>

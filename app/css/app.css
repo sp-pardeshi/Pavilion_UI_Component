@@ -1,0 +1,214 @@
+body {
+	font-size: 13px !important;
+	background: #F3F3F4;
+}
+html, body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Source Sans Pro","Helvetica Neue","Lucida Grande", Helvetica,Arial,sans-serif !important;
+}
+.navbar-default{
+  background-color: #252530;
+}
+.navbar-default .navbar-brand{
+  color: #FCFCFC;
+}
+.navbar-brand {
+  background: url(../images/pavilion-header.png) center / contain no-repeat;
+  width: 200px;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: white;
+}
+.navbar-toggle{
+  height: auto !important;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+  color: #FCFCFC;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #777;
+	margin-right: 15px;
+	font-size: 14px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #999;
+	background-color: transparent;
+}
+.container-fluid{
+  padding: 50px 0 0 0;
+}
+div.custome-row{
+  margin: 0 10px 10px 10px;
+}
+.well{
+  color: green;
+}
+.menuIcon{
+  padding: 0px 10px 0px 0px;
+}
+button.btn-primary:active{
+  background-color: #2196f3;
+  border-color: #0681e3;
+}
+
+div.custome-row1{
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.btn{
+  border-radius:0;
+}
+.btn-default{
+  background-color: #252530;
+  color: #999;
+  font-size: 12px;
+  border-color: #252530;
+}
+.btn-default:active,.btn-default:focus,.btn-default:hover{
+  background-color: #252530;
+  color: #777;
+  font-size: 12px;
+  border-color: #252530;
+}
+.btn-success{
+  background-color: #F0B821;
+  color: white;
+  font-size: 12px;
+  border-color: #F0B821;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.btn-success:active,.btn-success:focus,.btn-success:hover{
+  background-color: #F0B821;
+  color: black;
+  font-size: 12px;
+  border-color: #F0B821;
+}
+.btnIcon{
+  color:green !important;
+}
+
+.divider {
+  height: 1px;
+  width:100%;
+  display:block; /* for use on default inline elements like span */
+  margin: 0px 0px 8px 0px;
+  background-color: black;
+}
+
+.row-custom{
+	margin-bottom: 5px;
+}
+
+p.pageHeader{
+	margin: 0;
+  padding: 5px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  color: white;
+  font-size: 11px;
+  height: 25px;
+  background-color: #252530;
+  width: calc(100% - 180px);
+}
+
+.footerContent{
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+
+
+
+.navbar-nav > .user-menu > .dropdown-menu {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding: 1px 0 0 0;
+  border-top-width: 0;
+  width: 280px;
+}
+.dropdown-menu{
+	margin-right: 20px;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu,
+.navbar-nav > .user-menu > .dropdown-menu > .user-body {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.navbar-nav > li:hover,
+.navbar-nav > li:focus,
+.navbar-nav > li:active{
+	background: #2F2F3D !important;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header {
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+	background: #2F2F3D;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header > p {
+  z-index: 5;
+  color: #fff;
+  color: white;
+  font-size: 13px;
+  margin-top: 5px;
+	margin-bottom: 5px;
+}
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header > p > small {
+  display: block;
+  font-size: 10px;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-body {
+  padding: 15px;
+  border-bottom: 1px solid #f4f4f4;
+  border-top: 1px solid #dddddd;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-body:before,
+.navbar-nav > .user-menu > .dropdown-menu > .user-body:after {
+  content: " ";
+  display: table;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-body:after {
+  clear: both;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-body a {
+  color: #444 !important;
+}
+@media (max-width: 991px) {
+  .navbar-nav > .user-menu > .dropdown-menu > .user-body a {
+    background: #fff !important;
+    color: #444 !important;
+  }
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer {
+  background-color: #2F2F3D;
+  padding: 10px;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer:before,
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer:after {
+  content: " ";
+  display: table;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer:after {
+  clear: both;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default {
+  color: #666666;
+}
+@media (max-width: 991px) {
+  .navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default:hover {
+    background-color: #f9f9f9;
+  }
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: #2F2F3D;
+		color:#999;
+	}

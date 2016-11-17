@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Timeline Demo</title>
+
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+		<style type="text/css">
+			html {
+				font-family: "Source Sans Pro","Helvetica Neue","Lucida Grande", Helvetica,Arial,sans-serif !important;
+    			font-size: 13px;
+			}
+
+			.timeline-band-1 .timeline-ether-bg {
+			    background-color: #d9d9d9 !important;
+			}
+
+			.timeline-band-0 .timeline-ether-bg {
+			    background-color: #F3F3F4 !important;
+			}
+
+			.timeline-date-label {
+				color: #808080 !important;
+			}
+
+			.timeline-date-label-em {
+			    color: #000 !important;
+			}
+
+			table tr td:first-child {
+				font-weight: 600;
+				padding-right: 10px;
+			}
+
+			button {
+			    margin-right: 5px;
+			}
+		</style>
+		
+		<script src="http://api.simile-widgets.org/timeline/2.3.1/timeline-api.js?bundle=true" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			var jsonData = {
+			"events" : [
+				{
+					"start":			"Oct 3 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 1",
+					"caption": 			"Volume 1, 2.5GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 1</td></tr><tr><td>Size (GB) </td><td>2.5</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/../../images/stripped.png"
+				},{
+					"start":			"Nov 9 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2",
+					"caption": 			"Volume 2, 2.7GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2</td></tr><tr><td>Size (GB) </td><td>2.7</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Oct 14 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 3",
+					"caption": 			"Volume 3, 2.3GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 3</td></tr><tr><td>Size (GB) </td><td>2.3</td></tr><tr><td>Media Group </td><td>Group 3</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Oct 20 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 4",
+					"caption": 			"Volume 4, 2.0GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 4</td></tr><tr><td>Size (GB) </td><td>2.0</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Nov 23 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 5",
+					"caption": 			"Volume 5, 1.8GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 5</td></tr><tr><td>Size (GB) </td><td>1.8</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Oct 29 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 6",
+					"caption": 			"Volume 6, 1.95GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 6</td></tr><tr><td>Size (GB) </td><td>1.95</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Dec 3 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 7",
+					"caption": 			"Volume 7, 1.0GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 7</td></tr><tr><td>Size (GB) </td><td>1.0</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Nov 13 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 8",
+					"caption": 			"Volume 8, 1.0GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 8</td></tr><tr><td>Size (GB) </td><td>1.0</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Dec 23 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 9",
+					"caption": 			"Volume 9, 1.7GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 9</td></tr><tr><td>Size (GB) </td><td>1.7</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},{
+					"start":			"Dec 30 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 10",
+					"caption": 			"Volume 10, 2.1GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 10</td></tr><tr><td>Size (GB) </td><td>2.1</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Striped</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#008000",
+					"icon":				"../../images/stripped.png"
+				},
+
+
+
+
+				{
+					"start":			"Oct 3 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.1",
+					"caption": 			"Volume 2.1, 12.1GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.1</td></tr><tr><td>Size (GB) </td><td>12.1</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Nov 5 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.2",
+					"caption": 			"Volume 2.2, 12.11GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.2</td></tr><tr><td>Size (GB) </td><td>12.11</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Nov 8 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.3",
+					"caption": 			"Volume 2.3, 12.40GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.3</td></tr><tr><td>Size (GB) </td><td>12.40</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Oct 13 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.4",
+					"caption": 			"Volume 2.4, 10.5GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.4</td></tr><tr><td>Size (GB) </td><td>10.5</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Nov 24 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.5",
+					"caption": 			"Volume 2.5, 10.15GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.5</td></tr><tr><td>Size (GB) </td><td>10.15</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Dec 5 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.6",
+					"caption": 			"Volume 2.6, 11.04GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.6</td></tr><tr><td>Size (GB) </td><td>11.04</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Dec 10 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.7",
+					"caption": 			"Volume 2.7, 11.45GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.7</td></tr><tr><td>Size (GB) </td><td>11.45</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Dec 13 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.8",
+					"caption": 			"Volume 2.8, 13.0GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.8</td></tr><tr><td>Size (GB) </td><td>13.0</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Dec 18 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.9",
+					"caption": 			"Volume 2.9, 12.11GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.9</td></tr><tr><td>Size (GB) </td><td>12.11</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},{
+					"start":			"Dec 27 2016 00:00:00 GMT",
+					"title":			"Vol - Volume 2.10",
+					"caption": 			"Volume 2.10, 12.21GB",
+					"description":		"<table><tr><td>Name </td><td>Volume 2.10</td></tr><tr><td>Size (GB) </td><td>12.21</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Mirrored</td></tr><tr><td colspan='2'><button>Delete</button><button>Resize</button><button>Snapshot</button></td></tr></table>",
+					"color":			"#9c8c39",
+					"icon":				"../../images/mirrored.gif"
+				},
+
+
+
+
+				{
+					"start":			"Oct 7 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.1",
+					"caption": 			"Snapshot 3.1, 12.21GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.1</td></tr><tr><td>Size (GB) </td><td>12.21</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Oct 10 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.2",
+					"caption": 			"Snapshot 3.2, 11.11GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.2</td></tr><tr><td>Size (GB) </td><td>11.11</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Oct 17 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.3",
+					"caption": 			"Snapshot 3.3, 12.01GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.3</td></tr><tr><td>Size (GB) </td><td>12.01</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Oct 24 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.4",
+					"caption": 			"Snapshot 3.4, 12.10GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.4</td></tr><tr><td>Size (GB) </td><td>12.10</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Oct 29 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.5",
+					"caption": 			"Snapshot 3.5, 10.10GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.5</td></tr><tr><td>Size (GB) </td><td>10.10</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Nov 2 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.6",
+					"caption": 			"Snapshot 3.6, 11.5GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.6</td></tr><tr><td>Size (GB) </td><td>11.5</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Nov 8 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.7",
+					"caption": 			"Snapshot 3.7, 9.05GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.7</td></tr><tr><td>Size (GB) </td><td>9.05</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Nov 17 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.8",
+					"caption": 			"Snapshot 3.8, 11.05GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.8</td></tr><tr><td>Size (GB) </td><td>11.05</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Nov 22 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.9",
+					"caption": 			"Snapshot 3.9, 13.05GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.9</td></tr><tr><td>Size (GB) </td><td>13.05</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Dec 8 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.10",
+					"caption": 			"Snapshot 3.10, 10.50GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.10</td></tr><tr><td>Size (GB) </td><td>10.50</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},{
+					"start":			"Dec 21 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 3.11",
+					"caption": 			"Snapshot 3.11, 11.15GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 3.11</td></tr><tr><td>Size (GB) </td><td>11.15</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Full</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#15158e",
+					"icon":				"../../images/full.png"
+				},
+
+
+
+
+				{
+					"start":			"Nov 26 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.1",
+					"caption": 			"Snapshot 4.1, 11.15GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.1</td></tr><tr><td>Size (GB) </td><td>11.15</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Nov 30 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.2",
+					"caption": 			"Snapshot 4.2, 11.15GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.2</td></tr><tr><td>Size (GB) </td><td>11.15</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Nov 30 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.2",
+					"caption": 			"Snapshot 4.2, 11.25GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.2</td></tr><tr><td>Size (GB) </td><td>11.25</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Nov 20 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.3",
+					"caption": 			"Snapshot 4.3, 11.15GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.3</td></tr><tr><td>Size (GB) </td><td>11.15</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Nov 1 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.4",
+					"caption": 			"Snapshot 4.4, 10.5GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.4</td></tr><tr><td>Size (GB) </td><td>10.5</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Oct 26 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.5",
+					"caption": 			"Snapshot 4.5, 13.15GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.5</td></tr><tr><td>Size (GB) </td><td>13.15</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Oct 13 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.6",
+					"caption": 			"Snapshot 4.6, 13.45GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.6</td></tr><tr><td>Size (GB) </td><td>13.45</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Oct 5 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.7",
+					"caption": 			"Snapshot 4.7, 11.53GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.7</td></tr><tr><td>Size (GB) </td><td>11.53</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Dec 25 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.8",
+					"caption": 			"Snapshot 4.8, 10.13GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.8</td></tr><tr><td>Size (GB) </td><td>10.13</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Dec 16 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.9",
+					"caption": 			"Snapshot 4.9, 11.11GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.9</td></tr><tr><td>Size (GB) </td><td>11.11</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},{
+					"start":			"Nov 29 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 4.10",
+					"caption": 			"Snapshot 4.10, 12.48GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 4.10</td></tr><tr><td>Size (GB) </td><td>12.48</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Progress</td></tr><tr><td colspan='2'><button>Delete</button></td></tr></table>",
+					"color":			"#11bd11",
+					"icon":				"../../images/sync-progress.png"
+				},
+
+
+
+
+				{
+					"start":			"Oct 4 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.1",
+					"caption": 			"Snapshot 5.1, 12.48GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.1</td></tr><tr><td>Size (GB) </td><td>12.48</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Oct 9 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.2",
+					"caption": 			"Snapshot 5.2, 11.8GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.2</td></tr><tr><td>Size (GB) </td><td>11.8</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Oct 16 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.3",
+					"caption": 			"Snapshot 5.3, 10.18GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.3</td></tr><tr><td>Size (GB) </td><td>10.18</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Oct 20 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.4",
+					"caption": 			"Snapshot 5.4, 13.0GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.4</td></tr><tr><td>Size (GB) </td><td>13.0</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Oct 27 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.5",
+					"caption": 			"Snapshot 5.5, 13.70GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.5</td></tr><tr><td>Size (GB) </td><td>13.70</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Nov 1 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.6",
+					"caption": 			"Snapshot 5.6, 11.75GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.6</td></tr><tr><td>Size (GB) </td><td>11.75</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Nov 9 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.7",
+					"caption": 			"Snapshot 5.7, 10.17GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.7</td></tr><tr><td>Size (GB) </td><td>10.17</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Nov 15 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.8",
+					"caption": 			"Snapshot 5.8, 12.27GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.8</td></tr><tr><td>Size (GB) </td><td>12.27</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Nov 23 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.9",
+					"caption": 			"Snapshot 5.9, 10.27GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.9</td></tr><tr><td>Size (GB) </td><td>10.27</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Nov 28 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.10",
+					"caption": 			"Snapshot 5.10, 12.17GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.10</td></tr><tr><td>Size (GB) </td><td>12.17</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Dec 2 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.11",
+					"caption": 			"Snapshot 5.11, 11.18GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.11</td></tr><tr><td>Size (GB) </td><td>11.18</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Dec 7 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.12",
+					"caption": 			"Snapshot 5.12, 12.18GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.12</td></tr><tr><td>Size (GB) </td><td>12.18</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Dec 15 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.13",
+					"caption": 			"Snapshot 5.13, 10.80GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.13</td></tr><tr><td>Size (GB) </td><td>10.80</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Dec 20 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.14",
+					"caption": 			"Snapshot 5.14, 9.18GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.14</td></tr><tr><td>Size (GB) </td><td>9.18</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},{
+					"start":			"Dec 24 2016 00:00:00 GMT",
+					"title":			"Snap - Snapshot 5.15",
+					"caption": 			"Snapshot 5.15, 9.20GB",
+					"description":		"<table><tr><td>Name </td><td>Snapshot 5.15</td></tr><tr><td>Size (GB) </td><td>9.20</td></tr><tr><td>Media Group </td><td>Group 1</td></tr><tr><td>Type </td><td>Sync Complete</td></tr><tr><td colspan='2'><button>Delete</button><button>Detach</button></td></tr></table>",
+					"color":			"#960303",
+					"icon":				"../../images/sync-complete.png"
+				},
+
+			],
+			"dateTimeFormat": "Gregorian"
+			};
+
+			var tl;
+			function onLoad() {
+
+				var theme1 = Timeline.ClassicTheme.create();
+	            theme1.timeline_start = new Date(Date.UTC(2016, 9, 1));
+	            theme1.timeline_stop  = new Date(Date.UTC(2016, 11, 31));
+
+				var eventSource = new Timeline.DefaultEventSource();
+				var bandInfos = [
+					Timeline.createBandInfo({
+						eventSource:    eventSource,
+						date:           "Oct 31 2016 00:00:00 GMT",
+						width : "70%",
+						intervalUnit : Timeline.DateTime.DAY,
+						intervalPixels : 100,
+						theme : theme1
+					}),
+					Timeline.createBandInfo({
+						overview : true,
+						eventSource :    eventSource,
+						date :           "Oct 31 2016 00:00:00 GMT",
+						width : "30%",
+						intervalUnit : Timeline.DateTime.WEEK,
+						intervalPixels : 200,
+					})
+				];
+				bandInfos[1].syncWith = 0;
+  				bandInfos[1].highlight = true;
+
+				tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
+				eventSource.loadJSON(jsonData, ""); 
+			}
+
+			var resizeTimerID = null;
+			function onResize() {
+			    if (resizeTimerID == null) {
+			        resizeTimerID = window.setTimeout(function() {
+			            resizeTimerID = null;
+			            tl.layout();
+			        }, 500);
+			    }
+			}
+		</script>
+	</head>
+	<body onload="onLoad();" onresize="onResize();">
+		<div id="my-timeline" style="height: 300px; border: 1px solid #aaa"></div>
+		<noscript>
+		This page uses Javascript to show you a Timeline. Please enable Javascript in your browser to see the full page. Thank you.
+		</noscript>
+	</body>
+</html>
